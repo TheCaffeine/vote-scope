@@ -1,12 +1,25 @@
-# Heroku Django Starter Template
+# vote-scope
 
-An utterly fantastic project starter template for Django 2.0.
+ >[TheCaffeine] (https://github.com/TheCaffeine)
+   
+ # Description  
+This project allows users to login and declare that they have voted. The app allows users to see how many people have voted in their respective regions. This helps to curb ill ellection malpractices like election fraud and vote theft by giving users the opportnuity to cross tally in a public setting.  
 
 ## Features
 
 - Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
 - Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment.
+- Latest Python 4.0 runtime environment.
+
+
+## User Story  
+
+* Voters can create an account ( only once). Gender, Age, location. 
+* Voters can login.
+* Voters can authenticate they voted with a pic of their painted voting finger.
+* Voters can be able to see the number of votes from their region. 
+* Anonymous whistleblowing section for voters to report malpractices. 
+
 
 ## How to Use
 
@@ -36,8 +49,6 @@ You can replace ``helloworld`` with your desired project name.
     $ git push heroku master
 
     $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
 
 
 ## License: MIT
