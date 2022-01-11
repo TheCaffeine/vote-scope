@@ -36,7 +36,7 @@ https://github.com/TheCaffeine/vote-scope.git`
   ##### Setup Database  
    SetUp your database User,Password, Host then make migrate  
   ```bash 
- python manage.py makemigrations hood
+ python manage.py makemigrations vote-scope
   ``` 
   Now Migrate  
   ```bash 
