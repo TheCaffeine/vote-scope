@@ -7,13 +7,12 @@
 
  ## User Story  
 
- * Sign in with the application to start using.
- * Set up a profile about me and a general location and my neighborhood name.
- * Find a list of different businesses in my neighborhood.
- * Find Contact Information for the health department and Police authorities near my neighborhood.
- * Create Posts that will be visible to everyone in my neighborhood.
- * Change My neighborhood when I decide to move out.
- * Only view details of a single neighborhood.
+* Voters can create an account ( only once). Gender, Age, location. 
+* Voters can login.
+* Voters can authenticate they voted with a pic of their painted voting finger.
+* Voters can be able to see the number of votes from their region. 
+* Anonymous whistleblowing section for voters to report malpractices. 
+
 
  ## Setup and Installation  
  To get the project .......  
