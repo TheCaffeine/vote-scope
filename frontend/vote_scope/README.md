@@ -1,5 +1,8 @@
-# MyApp
 
+# Description  
+This project allows users to login and declare that they have voted. The app allows users to see how many people have voted in their respective regions. This helps to curb ill ellection malpractices like election fraud and vote theft by giving users the opportnuity to cross tally in a public setting.
+
+## Angular Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
 ## Development server
@@ -9,6 +12,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## User Story  
+
+* Voters can create an account ( only once). Gender, Age, location. 
+* Voters can login.
+* Voters can authenticate they voted with a pic of their painted voting finger.
+* Voters can be able to see the number of votes from their region. 
+* Anonymous whistleblowing section for voters to report malpractices. 
 
 ## Build
 
