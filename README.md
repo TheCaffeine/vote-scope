@@ -23,7 +23,8 @@
 https://github.com/TheCaffeine/vote-scope.git`
  ##### Navigate into the folder and install requirements  
   ```bash 
- cd HoodWatch 
+ cd vote-scope
+
  ```
  ##### Install and activate Virtual  
   ```bash 
