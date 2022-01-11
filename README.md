@@ -68,5 +68,5 @@ https://github.com/TheCaffeine/vote-scope.git`
 
  ## License 
 
- * [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/Owiti-Charles/Picture-Globe/blob/master/LICENSE)  
+ * [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://TheCaffiene/vote-scope/blob/master/LICENSE)  
  * Copyright (c) 2022 **TheCaffeine**
