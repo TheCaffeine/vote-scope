@@ -1,0 +1,21 @@
+{%extends 'all-votes/base.html'%}
+{% load static%}
+{% block content %}
+<style>
+    .home{
+        text-align: center;
+        background-image: url('https://user-images.githubusercontent.com/87479966/149214799-ea74b3af-1df7-4879-8d4d-7fdf4f2d47c7.png');
+        background-position:bottom;
+        background-size: 1100px 800px
+        ;
+        padding-bottom: 496px;
+    } 
+</style>
+
+{{block.super}}
+<div class="home">
+    <h4>Welcome to vote-scope Kenya</h4>
+    <h5>Login to find out <br> how many people in your country have registered to vote</h5>
+    <a href="{% url 'logout' %}" class="btn btn-danger">LOGIN</a>
+  </div>
+{% endblock %}
