@@ -4,4 +4,6 @@ from .import views
 # from . import views as app_views
 
 
-urlpatterns = []
+urlpatterns = [
+      path('',views.index ,name = 'index'),
+]
