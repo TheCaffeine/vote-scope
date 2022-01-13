@@ -1,0 +1,22 @@
+{%extends 'all-votes/base.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% block styles %}
+{{ block.super}}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block content %}
+<br>
+<div class="container box" style="">
+    <div class="text-center" style=" font-family: 'Cookie', cursive;font-size: 15px; ">
+    <div class="title text-center" style ="font-size:bold; font-weight:800" >Exercise your Civic Duty by signing In and Being Parts of the Count</div>
+    <hr>
+    <div class="guide " style ="font-size:bold; font-weight:800" >Be Accountable, Be Among the Counted.</div>
+    </div>
+    <form action="{%url 'create_vote'%}" method="post" enctype="multipart/form-data">
+        {%csrf_token%}    
+        {% bootstrap_form vote_form%}
+        <input type="submit" class="btn btn-info " value="Share Your Vote">
+    </form>
+</div>
+{% endblock %}
