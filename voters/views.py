@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
-
+from .forms import InputForm
 from .forms import *
 from .models import *
 
@@ -24,3 +24,8 @@ def FAQ(request):
     #     message = "You haven't searched for any term"
     #     return render(request, "search.html", {"message": message})
     
+
+def signup(request):
+	context ={}
+	context['form']= InputForm()
+	return render(request, "home.html", context)
