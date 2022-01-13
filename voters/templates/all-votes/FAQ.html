@@ -1,0 +1,47 @@
+{% extends "all-votes/base.html" %}
+ {% block content %}
+<div id="learn">
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+    <img src="../assets/county.jpeg" alt="" height="800" width="1350">
+</div>
+<div id="instructors" style="background-image: url('../assets/back.jpeg');">
+
+    <h3 style="text-align: center;">FAQ’s</h3>
+
+<LI> <u> <b>Do you register as a voter?</b></u> </LI>
+<br>
+<p>An eligible voter must present himself or herself to the registration officer with his/her original identification documents at the designated registration centre during working hours.
+The applicant fills the Application for Registration form (Form A)
+Registered voters will be issued with a registration acknowledgement slip bearing the voter′s details.
+However, this slip will not be a requirement for voting.</p>
+
+<li> <u> <b>When can someone be denied registration?</b></u></li>  
+<br>
+<p>When you are under 18 years of age
+When you are not in possession of the original ID card or a valid Kenyan passport
+When one is un-discharged bankrupt
+When you have been found guilty by an election court or reported to be guilty of any election offence during the preceding five years.
+If a competent court declares you to be of unsound mind</p>
+
+<li> <u> <b>Is an eligible voter allowed to register more than once?</b></u></li>
+<br>
+
+<p>No! A person is only allowed to register once as a voter in a constituency or registration centre of his or her choice. It is an offence to register more than once.</p>
+
+<li>  <u> <b>What is the penalty of registering more than once?</b></u></li>
+<br>
+
+<p>Persons who have registered more than once are liable on conviction, to a fine not exceeding one hundred thousand Kenya shillings or imprisonment for a term not exceeding one year or both. Such persons shall be barred from participating in the immediate election and the next that follows.</p>
+
+<li>  <u> <b>Can a person transfer as a voter to another registration centre or constituency?</b></u></li> 
+<br>
+<p>YES! A person may transfer as a voter to another registration centre of his or her choice within the registration period.</p>
+</div> 
+
+{% endfor %}
+{% endblock %}
