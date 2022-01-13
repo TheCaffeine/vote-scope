@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 
-from voters.forms import ProfileForm, UpdateProfileForm
+from .forms import *
 from .models import *
 
 # Create your views here.
