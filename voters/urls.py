@@ -6,10 +6,11 @@ from .import views
 
 urlpatterns = [
     path('',views.index ,name = 'index'),
-    path('FAQ/',views.FAQ ,name = 'FAQ'),
+    path('create_profile/',views.create_profile,name = 'create_profile'),
+    # path('FAQ/',views.FAQ ,name = 'FAQ'),
     path('accounts/profile/', views.index,name='index'),
-    # path('profile/',views.profile,name = 'profile'),
+    path('profile/',views.profile,name = 'profile'),
     # path('update_profile/<int:id>',views.update_profile, name='update_profile'),
-    # path('<str:username>/', views.profile, name='profile'),
-  
+#     # path('<str:username>/', views.profile, name='profile'),
+#    path('create_vote/',views.create_vote,name = 'create_vote'),
 ]

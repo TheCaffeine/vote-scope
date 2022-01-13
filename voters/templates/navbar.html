@@ -1,3 +1,11 @@
+<style>
+  .profile-img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+</style>
 <nav class="navbar navbar-expand-lg bg-light navbar">
     <div class="container">
       <a href="#" class="navbar-brand">Home</a>
@@ -12,9 +20,12 @@
           <li class="nav-item">
             <a href="#instructors //" class="nav-link">FAQ’s</a>
           </li>
-          <li>
-            <a class="btn btn-default" href="/profile" style=" color: black;">{{ user.username }}</a>
-        </li>
+          {% if profile.profile_pic %}
+          <img src="{{profile.profile_pic.url}}" alt="" class="profile-img">
+          {%else%}
+          <img src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"
+              class="card-img-top profile-img" alt="My profile picture">
+          {% endif %}
         </ul>
       </div>
     </div>

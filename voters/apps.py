@@ -1,5 +1,5 @@
-from django.apps import AppConfig
+# from django.apps import AppConfig
 
 
-class VotersConfig(AppConfig):
-    name = 'voters'
+# class VotersConfig(AppConfig):
+#     name = 'voters'
