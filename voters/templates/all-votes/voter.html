@@ -1,0 +1,33 @@
+
+{%extends 'registration/base.html'%}
+{% load bootstrap4 %}
+{% load static%}
+{% block content%}
+<section class="html">
+    <h1>Total Voters Count</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{vote_count}} voters
+
+                
+            </div>
+            <div class="col-md-6">
+                {% for location in votes %}
+                <h2>Counties</h2>
+                {{location.location.name}} 
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}
+
+<style>
+    body{
+        background: url('blob:https://web.whatsapp.com/77500b0a-f214-4b72-973a-b5c9442fe0b3');
+        background-size:cover;
+        background-position:center;
+        min-height:100vh
+    }
+</style>
+{% endblock %}

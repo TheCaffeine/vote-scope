@@ -39,10 +39,13 @@
   
   
   .prof-pic{
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
+  }
+  .user{
+    margin-top: 100%;
   }
 </style>
 
@@ -53,7 +56,8 @@
 
 
 
-<div class="container container-full">
+<div class="container container-ful">
+  <h1 style ="font-size:20px;" class="text-primary">My Profile</h1>
     <div class="row">
         <!-- <div class="">
             <div style="font-size: 80px;">
@@ -61,8 +65,9 @@
             </div>
         </div> -->
         <div class="prof">
-
+        
             <div class="display text-center">
+              
 
                 {% if profile.profile_pic %}
                 <img src="{{profile.profile_pic.url}}" alt="" class="prof-pic">
@@ -84,30 +89,19 @@
                 <h6>Joined on: <span class="badge rounded-pill bg-secondary text-white">
                     {{ user.date_joined|date }} </span></h6>
                     <hr>
-                  <h6 class="mt-2"><span><i class="fa fa-map-marker fa-lg" aria-hidden="true" ></i></span>    {{profile.location}}</h6>
+                  <h6 class=""><span><i class="fa fa-map-marker fa-lg" aria-hidden="true" ></i></span>    {{profile.location}}</h6>
             </div>
             
             
         </div>
         
+    
     </div>
    
     
 
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            {% if request.user is user %}  
-            {% comment %} <div class="">
-              <a href="{%url 'update_profile' user.id %}" class="phots"><i class="fa fa-plus "></i>   
-                Edit Profile
-              </a>
-            </div> {% endcomment %}
-            {% endif %}
-        </div>
-       
-    </div>
-</div>
+            
+
 
 {% endblock %}

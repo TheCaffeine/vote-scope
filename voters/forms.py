@@ -7,4 +7,10 @@ from .models import *
 class ProfileForm(forms.ModelForm):
     class Meta:
         model=Profile        
-        fields=['username',  'profile_pic', 'username', 'bio', 'location', ]
+        fields=['username',  'profile_pic', 'bio', 'location', ]
+
+
+class VotersForm(forms.ModelForm):
+    class Meta:
+        model= Votes      
+        fields=['id_number',  'voters_image', 'location','gender' ]

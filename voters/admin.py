@@ -4,3 +4,5 @@ from .models import *
 # Register your models here.
 admin.site.register(Profile)
 admin.site.register(Location)
+admin.site.register(Gender)
+admin.site.register(Votes)

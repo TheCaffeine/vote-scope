@@ -11,6 +11,8 @@ urlpatterns = [
     path('accounts/profile/', views.index,name='index'),
     path('profile/',views.profile,name = 'profile'),
     # path('update_profile/<int:id>',views.update_profile, name='update_profile'),
-#     # path('<str:username>/', views.profile, name='profile'),
-#    path('create_vote/',views.create_vote,name = 'create_vote'),
+    
+   path('voters_member/',views.voters_member,name = 'voters_member'),
+
+   path('create_form/',views.create_form,name = 'create_form'),
 ]

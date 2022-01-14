@@ -1,33 +1,61 @@
 <style>
-  .profile-img{
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-</style>
-<nav class="navbar navbar-expand-lg bg-light navbar">
-    <div class="container">
-      <a href="#" class="navbar-brand">Home</a>
-      <div class="collapse navbar-collapse" id="#navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="#learn" class="nav-link">What’s your County ?</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://www.iebc.or.ke/registration/?how#" class="nav-link">Your Vote rights </a>
-          </li>
-          <li class="nav-item">
-            <a href="#instructors //" class="nav-link">FAQ’s</a>
-          </li>
-          {% if profile.profile_pic %}
-          <img src="{{profile.profile_pic.url}}" alt="" class="profile-img">
-          {%else%}
-          <img src="https://st2.depositphotos.com/1104517/11965/v/600/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg"
-              class="card-img-top profile-img" alt="My profile picture">
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-  </nav>
+
   
+  
+  .navigation{
+      border-bottom:2px solid white;
+  }
+  footer p{
+      text-align:center;
+      margin-top:15%;
+     
+  }
+  .profile-img{
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+</style>
+
+{{block.super}}
+
+<body class="home-content">
+<div class="home">
+  <nav class="navbar navbar-expand-lg navbar-light navigation container-full fixed-top" style="background-color:grey" >
+      <a class="navbar-brand" href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+    
+      <ul class="nav justify-content-end">
+       
+        <li class="nav-item">
+          <li class="nav-item text-light">
+              <a href="{% url 'voters_member' %}" class="nav-link "style="color:black;">Votes</a>
+            </li>
+        </li>
+        
+    
+       
+        <li class="mb-4">
+            <li class="nav-item ">
+              <a href="https://www.iebc.or.ke/registration/?how#" class="nav-link " style="color:black;">VoterRights </a>
+            </li>
+                 
+          {% for prof in profiles %}
+          <li class="nav-item">
+            <a class="" href="{% url 'profile'%}"><img src="{{ prof.profile_pic.url }}" alt="" class="profile-img"> </a>
+          </li>
+          {% endfor %}
+    </div>
+    
+      
+    </ul>
+    
+  
+  </nav>
+ 
