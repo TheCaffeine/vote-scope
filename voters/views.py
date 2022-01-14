@@ -1,15 +1,12 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
-
 from .forms import *
 from .models import *
 
 # Create your views here.
 
 
-def index(request):
-    return render(request, 'all-votes/index.html')
 
 @login_required(login_url='/accounts/login/')
 def index(request):
@@ -78,41 +75,3 @@ def voters_member(request):
     
     # county=Votes.objects.filter(votes=voters)
     return render(request,'all-votes/voter.html', { 'votes':votes, 'vote_count':votes.count()})
-# def FAQ(request):
-#     if 'FAQ' in request.GET and request.GET["FAQ"]:
-#         FAQ = request.GET.get("FAQ")
-        
-#         message = f"Here are the FAQs"
-
-#         return render(request, "all-votes/FAQ.html", {"message": message, "FAQ": FAQ})
-#     # else:
-#     #     message = "You haven't searched for any term"
-#     #     return render(request, "search.html", {"message": message})
-
-
-# def votes(request):
-   
-#     votes = Votes.objects.all().order_by('-id')
-
-#     context ={'votes':Votes}
-#     return render(request, 'all-votes/voters.html', context)
-
-
-# def create_vote(request):
-#     current_user = request.user
-#     if request.method == 'POST':
-#         vote_form = votersForm(request.POST, request.FILES)
-#         if vote_form.is_valid():
-
-#             vote = vote_form.save(commit=False)
-#             vote.user = current_user
-#             vote.save()
-        
-#         return HttpResponseRedirect('/votes')
-
-#     else:
-#         vote_form = votersForm()
-
-
-#     context = {'vote_form':vote_form}
-#     return render(request, 'allcreate_vote.html',context)
