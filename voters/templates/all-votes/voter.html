@@ -3,31 +3,82 @@
 {% load bootstrap4 %}
 {% load static%}
 {% block content%}
-<section class="html">
-    <h1>Total Voters Count</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                {{vote_count}} voters
-
-                
-            </div>
-            <div class="col-md-6">
-                {% for location in votes %}
-                <h2>Counties</h2>
-                {{location.location.name}} 
-            </div>
-        </div>
-    </div>
-</section>
-{% endfor %}
-
 <style>
-    body{
-        background: url('static/Assets/Group 2.png');
+     .html{
+        background-image: url({% static 'Assets/Group 2.png' %});
         background-size:cover;
         background-position:center;
-        min-height:100vh
+        background-repeat:no-repeat;
+        margin-top:15rem;
+        overflow-x: hidden;
+        height:100vh;
+        padding:2%;
+       
+    } 
+    .style{
+        position:absolute;
+        top:60%;
+        left:80%;
+        
+        
+    }
+    .counties{
+        position:absolute;
+        top:100%;
+        left:40%;
+    }
+    
     }
 </style>
+<body class="html">
+    <section >
+  
+        <div class="container">
+            <div class="row">
+                <div class="style">
+                    <h1>Total Voters Count</h1>
+                    {{vote_count}} voters
+                </div>
+    
+                <div class="counties">
+                    <h2>Counties</h2>
+                   
+                   
+                    <ol>
+                        <li>
+                            Muranga
+
+                        </li>
+                        <li>
+                            Embu
+                             
+                        </li>
+                        <li>
+                            Kirinyaga
+                             
+                        </li>
+                        <li>
+                            Kericho
+                             
+                        </li>
+                        <li>
+                           Nairobi
+                             
+                        </li>
+                        <li>
+                            Mombasa
+                             
+                        </li>
+                    </ol>
+                    {% for location in votes %}
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </section>
+</body>
+
+
+
 {% endblock %}

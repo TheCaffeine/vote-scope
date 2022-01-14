@@ -3,32 +3,27 @@
 {% block content %}
 <style>
     body{
-        border-radius:50px;
+       
         text-align: center;
         background-image: url('https://user-images.githubusercontent.com/87479966/149214799-ea74b3af-1df7-4879-8d4d-7fdf4f2d47c7.png');
         background-repeat:no-repeat; 
         background-size:cover;
         background-position:center;
         
-    } 
-  
-  
-      
+    }      
 </style>
-<div class="container">
-    <div style="margin-top:20%">
-        <h4 >Welcome to vote-scope Kenya</h4>
-        <h5>Login to find out <br> how many people in your country have registered to vote</h5>
-       
-        <a href="{% url 'logout' %}" class="btn btn-danger">LOGIN</a>
-      </div>
-      <div>{% for items in voters %}
-        {{items.county.count}} member{{items.county.count|pluralize}}
-        {% endfor %}
-        </div>
-        
+<body class="dee">
+    <div class="container">
+        <div style="margin-top:20%">
+            <h4 >Welcome to vote-scope Kenya</h4>
+            <h5>Login to find out <br> how many people in your country have registered to vote</h5>
+            <a href="{% url 'create_form' %}" class="btn btn-warning">Authenticate</a>
+            <a href="{% url 'logout' %}" class="btn btn-danger">LOGOUT</a>
+
+          </div>
+          
     </div>
-</div>
+</body>
 
 
 {% endblock %}
